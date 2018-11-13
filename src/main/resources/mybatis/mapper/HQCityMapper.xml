@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xingniu.zoon.dao.HQCityDao">
+
+
+
+	<sql id="Base_Column_List">
+		  `id`,
+		  `countryID`,
+		  `stateID`,
+		  `cityID`,
+		  `nameChn`,
+		  `nameEng`,
+		  `namePinyin`,
+		  `stateNameChn`,
+		  `stateNameEng`,
+		  `national`,
+		  `create_time`,
+		  `update_time`
+	</sql>
+
+	<select id="getByCityId" resultType="com.xingniu.zoon.model.HQCity"
+			parameterType="java.lang.String">
+		select
+			<include refid="Base_Column_List" />
+		from hq_city
+		where cityID = #{cityId}
+	</select>
+
+	<!--
+		建表语句
+	CREATE TABLE `hq_city` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `countryID` varchar(50) DEFAULT NULL COMMENT '国家标识ID',
+	  `stateID` varchar(50) DEFAULT NULL COMMENT '州、省份ID',
+	  `cityID` varchar(50) DEFAULT NULL COMMENT '城市标识',
+	  `nameChn` varchar(50) DEFAULT NULL COMMENT '城市名',
+	  `nameEng` varchar(50) DEFAULT NULL COMMENT '城市名英文',
+	  `namePinyin` varchar(50) DEFAULT NULL COMMENT '城市名拼音',
+	  `stateNameChn` varchar(50) DEFAULT NULL COMMENT '州、省份中文名',
+	  `stateNameEng` varchar(255) DEFAULT NULL COMMENT '州、省份英文名',
+	  `national` varchar(255) DEFAULT NULL COMMENT '州、省份英文名 86中国，99国外',
+	  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+	  `update_time` datetime DEFAULT CURRENT_TIMESTAMP,
+	  PRIMARY KEY (`id`),
+	  UNIQUE KEY `uq_index_cityID` (`cityID`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	-->
+
+</mapper>
