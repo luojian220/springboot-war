@@ -6,7 +6,7 @@ package com.xingniu.zoon.threadTask;
  * @ClassName: Test
  * @Reason: TODO ADD REASON(可选)
  * @date: 2018年11月13日 15:24
- * @company:星牛旅游
+ * @company:
  * @since JDK 1.8
  */
 public class Test {

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @ClassName: IndexController
  * @Reason: TODO ADD REASON(可选)
  * @date: 2018年11月13日 14:20
- * @company:星牛旅游
+ * @company:
  * @since JDK 1.8
  */
 @RestController

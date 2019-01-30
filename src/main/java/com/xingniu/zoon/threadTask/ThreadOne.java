@@ -6,7 +6,7 @@ package com.xingniu.zoon.threadTask;
  * @ClassName: ThreadOne
  * @Reason: TODO ADD REASON(可选)
  * @date: 2018年08月27日 09:45
- * @company:星牛旅游
+ * @company:
  * @since JDK 1.8
  */
 public class ThreadOne implements Runnable {
